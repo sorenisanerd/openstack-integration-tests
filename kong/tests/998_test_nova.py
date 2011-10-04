@@ -320,6 +320,7 @@ class TestNovaAPI(tests.FunctionalTest):
         data = json.dumps(json_str)
         response, content = http.request(path, 'POST', headers=headers,
                                          body=data)
+        print content
         try:
             json_return = json.loads(content)
         except ValueError:
