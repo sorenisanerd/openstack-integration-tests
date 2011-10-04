@@ -82,6 +82,9 @@ class TestGlanceAPI(tests.FunctionalTest):
             self.glance['ramdisk_id'] = None
             return
 
+        if not self.config['environment']['initrd']:
+            del self.config['environment']['initrd']
+
         initrd = self.config['environment']['initrd']
 
         if 'apiver' in self.glance:
