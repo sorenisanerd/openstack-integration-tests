@@ -309,7 +309,7 @@ class TestNovaAPI(tests.FunctionalTest):
                 "flavorRef": "http://%s:%s/%s/flavors/2" % (self.nova['host'],
                                                       self.nova['port'],
                                                       self.nova['ver']),
-                "imageRef": self.glance['image_id']
+                "imageRef": '%s' % self.glance['image_id']
 #                "imageRef": "http://%s:%s/%s/images/%s" % (self.nova['host'],
 #                                                      self.nova['port'],
 #                                                      self.nova['ver'],
