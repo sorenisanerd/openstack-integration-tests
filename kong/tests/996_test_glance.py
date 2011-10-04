@@ -62,6 +62,7 @@ class TestGlanceAPI(tests.FunctionalTest):
                    'Content-Type': 'application/octet-stream'}
         image_file = open(kernel, "rb")
         http = httplib2.Http()
+        print path
         response, content = http.request(path, 'POST',
                                          headers=headers,
                                          body=image_file)
