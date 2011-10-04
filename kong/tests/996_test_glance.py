@@ -135,7 +135,7 @@ class TestGlanceAPI(tests.FunctionalTest):
                    'Content-Length': '%d' % os.path.getsize(image),
                    'Content-Type': 'application/octet-stream'}
 
-        if self.glance['ramdisk_id']:
+        if 'ramdisk' in self.glance:
             ramdisk_id = '%s' % self.glance['ramdisk_id']
             headers['x-image-meta-property-Ramdisk_id'] = ramdisk_id
 
